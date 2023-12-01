@@ -1,0 +1,86 @@
+[
+    {
+      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/82ebc109-e569-4cbd-b25a-fc435e97b53a_268466b7-4d23-4be1-8cb9-b1f03e73391e.jpg?auto=format",
+      "title": "Mie Ayam Monas",
+      "slug": "Mie-Ayam-Monas",
+      "ingridients": "Mie Ayam + 1 Bakso Monas + Pangsit Rebus",
+      "youtube": {
+        "title": "MANTAP !!! MAKAN MIE AYAM DI MONAS",
+        "link": "https://www.youtube.com/watch?v=85L-_EvWCVY"
+      },
+      "made": "Gojek",
+      "rating": "5.0",
+      "isPopular": true,
+      "isNew": false
+    },
+    {
+      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/f8c23004-1095-4722-b328-99d884e481db_12566.jpg?auto=format",
+      "title": "Jagoan Hemat",
+      "slug": "Jagoan-Hemat",
+      "ingridients": "2 Pcs Rice + 2 Pcs Chicken + 2 Pcs Aqua",
+      "youtube": {
+        "title": "KFC Combo • Jagoan Hemat Kenyang Berdua • TVC Edisi 2023",
+        "link": "https://www.youtube.com/watch?v=hyKsVbWgG3w"
+      },
+      "made": "Gojek",
+      "rating": "5.0",
+      "isPopular": true,
+      "isNew": false
+    },
+    {
+      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a0881254-4260-43d4-b0b0-32feb0985166_Go-Biz_20220620_132311.jpeg?auto=format",
+      "title": "Special Sapi (Telur Ayam 4, Daging Lebih Banyak)",
+      "slug": "Special-Sapi",
+      "ingridients": "Telur Ayam 4 Dan Daging Lebih Banyak",
+      "youtube": {
+        "title": "Martabak AA, Manggarai",
+        "link": "https://gofood.co.id/en/jakarta/restaurant/martabak-aa-manggarai-0d3bbb05-6365-4e9e-839e-529bc06ae6ac"
+      },
+      "made": "Gojek",
+      "rating": "5.0",
+      "isPopular": true,
+      "isNew": false
+    },
+    {
+      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/79cb20e9-1070-4e40-9f58-17d94677dfd4_Go-Biz_20230106_001729.jpeg?auto=format",
+      "title": "Paket Promo Happy 1",
+      "slug": "Paket-Promo-Happy-1",
+      "ingridients": "Nasi + ayam + tempe + sambal + lalapan + es tekit",
+      "youtube": {
+        "title": "Ayam Geybok Bang Jarwo, Manggarai",
+        "link": "https://gofood.co.id/en/jakarta/restaurant/ayam-geybok-bang-jarwo-manggarai-b2a16f15-d770-406a-98b4-04c119c43372"
+      },
+      "made": "Gojek",
+      "rating": "5.0",
+      "isPopular": false,
+      "isNew": true
+    },
+    {
+      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/4f48ee93-ac5e-4d75-a327-61f040fdd665_87bd6907-d1bf-4c3c-bc6e-9076d0e8aec7.jpg?auto=format",
+      "title": "Nasi Cethut",
+      "slug": "Nasi-Cethut",
+      "ingridients": "Nasi, mie jawa, orek tempe, ayam suwir, telur, sambal, paru goreng",
+      "youtube": {
+        "title": "Cethut, Sampoerna Strategic Square",
+        "link": "https://gofood.co.id/en/jakarta/restaurant/cethut-sampoerna-strategic-square-272e0da8-43a2-4ab2-ae65-c79b6b57484f"
+      },
+      "made": "Gojek",
+      "rating": "5.0",
+      "isPopular": false,
+      "isNew": true
+    },
+    {
+      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/517fe07f-e646-4ff1-aca8-779107be2758_menu-item-image_1664424807697.jpg?auto=format",
+      "title": "Paket Duo Hemat 2",
+      "slug": "Paket-Duo-Hemat-2",
+      "ingridients": "Paket duo hemat 2 untuk 2 porsi (nasi, ayam geprek mix telor + keju mozarella + sambal bohay/karca + timun)",
+      "youtube": {
+        "title": "Ayam Keprabon Express, Ambassador",
+        "link": "https://gofood.co.id/en/jakarta/restaurant/ayam-keprabon-express-ambassador-0ca2fb1a-8407-4375-b4a6-6b770300d48a"
+      },
+      "made": "Gojek",
+      "rating": "5.0",
+      "isPopular": false,
+      "isNew": true
+    }
+  ]

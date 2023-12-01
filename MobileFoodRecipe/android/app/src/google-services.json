@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "243090615316",
+    "project_id": "mama-recipe-apps",
+    "storage_bucket": "mama-recipe-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243090615316:android:2d216f0e8b2304f43bcb01",
+        "android_client_info": {
+          "package_name": "com.mobilefoodrecipe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvR8QLK7CjD2rV_FrUgja7fZsouZU1yu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
