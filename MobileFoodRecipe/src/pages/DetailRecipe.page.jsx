@@ -8,32 +8,89 @@ import {
   Linking,
   TextInput,
 } from 'react-native';
-import {Text, Button, Avatar} from 'react-native-paper';
+import {Text, Button, Avatar, Snackbar} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/dist/FontAwesome6';
 import firestore from '@react-native-firebase/firestore';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function DetailRecipe({navigation, route}) {
   const [bodyView, setBodyview] = React.useState('ingredients');
   const {image, title, made, ingridients, youtube, slug} = route.params;
   const [commentList, setCommentList] = React.useState([]);
+  const [message, setMessage] = React.useState('');
+
+  const [visible, setVisible] = React.useState(false);
+  const [snackBarBackground, setSnacBarBackground] = React.useState('');
+  const [messageSnackBar, setMessageSnackBar] = React.useState('');
+
+  const onDismissSnackBar = () => setVisible(false);
 
   React.useEffect(() => {
+    handlegetComment();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handlegetComment = async () => {
+    // await AsyncStorage.removeItem('user')
     firestore()
       .collection('comment')
-      .where('recipefood', '==' ,slug)
+      .where('recipefood', '==', slug)
       .get()
       .then(querySnapshot => {
-        let tempData = []
+        let tempData = [];
         querySnapshot.forEach(documentSnapshot => {
-          tempData.push(documentSnapshot)
+          tempData.push(documentSnapshot);
           // console.log(documentSnapshot)
         });
         // eslint-disable-next-line no-undef
         setCommentList(tempData);
       });
-  }, []);
+  };
+
+  const handleComment = async () => {
+    const user = await AsyncStorage.getItem('user');
+    if (user) {
+      firestore()
+        .collection('comment')
+        .add({
+          recipefood: slug,
+          message: message,
+          name: JSON.parse(user).fullname,
+          photo: 'https://i.pravatar.cc/100',
+          created_at: new Date().getTime(),
+        })
+        .then(() => {
+          setVisible(true);
+          setMessageSnackBar('Comment created Sucessfully');
+          setSnacBarBackground('#75b798');
+
+          handlegetComment();
+          // console.log(handlegetComment)
+        });
+    } else {
+      setVisible(true);
+      setMessageSnackBar('Please Login');
+      setSnacBarBackground('#842029');
+      setTimeout(() => {
+        navigation.navigate('Login');
+      }, 2000);
+    }
+  };
   return (
     <>
+      <Snackbar
+        wrapperStyle={{top: 0, position: 'absolute', zIndex: 999999}}
+        style={{backgroundColor: snackBarBackground, marginBottom: 15}}
+        visible={visible}
+        onDismiss={onDismissSnackBar}
+        action={{
+          label: 'x',
+          onPress: () => {
+            onDismissSnackBar();
+          },
+        }}>
+        <Text style={{color: 'white'}}>{messageSnackBar}</Text>
+      </Snackbar>
       <ScrollView>
         <View>
           <ImageBackground
@@ -198,11 +255,12 @@ function DetailRecipe({navigation, route}) {
           <View style={{marginTop: 20}}>
             <TextInput
               mode="outlined"
-              label="Outlined input"
+              type
               multiline={true}
               numberOfLines={4}
               placeholder="Type something"
               style={{backgroundColor: '#FAF7ED'}}
+              onChangeText={value => setMessage(value)}
             />
           </View>
 
@@ -215,23 +273,29 @@ function DetailRecipe({navigation, route}) {
               marginTop: 15,
               marginBottom: 15,
             }}
-            onPress={() => console.log('Pressed')}>
+            onPress={handleComment}>
             Comment
           </Button>
           <Text>Comment : </Text>
-          {commentList?.map((item, key) => (
-            <View style={{flexDirection: 'row', gap: 20, marginTop: 15}} key={key}>
-              <Avatar.Image
-                size={50}
-                source={{uri: item?._data?.photo}}
-                style={{borderRadius: 100}}
-              />
-              <View>
-                <Text style={{fontWeight: 'bold'}}>{item?._data?.name}</Text>
-                <Text>{item?._data?.message}</Text>
+          {commentList
+            ?.sort(
+              (next, prev) => prev?._data.created_at - next?._data.created_at,
+            )
+            ?.map((item, key) => (
+              <View
+                style={{flexDirection: 'row', gap: 20, marginTop: 15}}
+                key={key}>
+                <Avatar.Image
+                  size={50}
+                  source={{uri: item?._data?.photo}}
+                  style={{borderRadius: 100}}
+                />
+                <View>
+                  <Text style={{fontWeight: 'bold'}}>{item?._data?.name}</Text>
+                  <Text>{item?._data?.message}</Text>
+                </View>
               </View>
-            </View>
-          ))}
+            ))}
         </View>
       </ScrollView>
     </>
