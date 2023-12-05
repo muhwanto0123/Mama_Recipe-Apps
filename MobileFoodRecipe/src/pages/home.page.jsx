@@ -10,11 +10,16 @@ import {
   ScrollView,
   TouchableWithoutFeedback,
 } from 'react-native';
+
+
+
 import {Searchbar, Text} from 'react-native-paper';
 import recipeList from '../data/recipe.json';
 
+
 function Home({navigation}) {
   const [keyword, setKeyword] = React.useState('');
+
   return (
     <ScrollView style={styles.root}>
       <Searchbar
@@ -71,7 +76,7 @@ function Home({navigation}) {
             .map((item, key) => (
               <TouchableWithoutFeedback
                 key={key}
-                onPress={() => navigation.navigate('Detail_Recipe', item)}>
+                onPress={() => navigation.navigate('Detail', item)}>
                 <View style={{marginTop: 15}}>
                   <ImageBackground
                     source={{
@@ -108,7 +113,7 @@ function Home({navigation}) {
         .map((item, key) => (
           <TouchableWithoutFeedback
             key={key}
-            onPress={() => navigation.navigate('Detail_Recipe', item)}>
+            onPress={() => navigation.navigate('Detail', item)}>
             <View
               style={{flexDirection: 'row', gap: 15, marginTop: 15}}
               key={key}>
@@ -138,6 +143,7 @@ function Home({navigation}) {
             </View>
           </TouchableWithoutFeedback>
         ))}
+
       <View style={{marginBottom: 50}} />
     </ScrollView>
   );

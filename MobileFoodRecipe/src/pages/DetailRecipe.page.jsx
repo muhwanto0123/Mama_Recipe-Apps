@@ -226,6 +226,7 @@ function DetailRecipe({navigation, route}) {
                         position: 'absolute',
                         alignItems: 'center',
                         paddingTop: 47,
+                        paddingLeft: 150,
                       }}>
                       <Icon name="play" size={75} color="#fff" />
                     </View>
