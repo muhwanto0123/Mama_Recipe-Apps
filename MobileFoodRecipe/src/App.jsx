@@ -21,7 +21,8 @@ import firestore from '@react-native-firebase/firestore';
 import {createStackNavigator} from '@react-navigation/stack';
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import TabNavigator from '../navigation/tab_navigation';
+import TabNavigator from '../navigation/navigation';
+import Navigation from '../navigation/navigation';
 
 // import Home from './pages/home.page';
 // import DetailRecipe from './pages/DetailRecipe.page';
@@ -106,7 +107,7 @@ function App() {
             style={{padding: 10}}
           />
         </Stack.Navigator> */}
-        <TabNavigator />
+        <Navigation />
       </PaperProvider>
     </NavigationContainer>
   );
