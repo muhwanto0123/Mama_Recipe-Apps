@@ -17,40 +17,10 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function Tab_Navigation() {
-  const [email, setEmail] = React.useState('');
-
-  // const userLogin = () => {
-  //   firestore()
-  //     .collection('users')
-  //     .where('email', '==', email)
-  //     .get()
-  //     .then(async querySnapshot => {
-  //       let tempData = [];
-  //       querySnapshot.forEach(documentSnapshot => {
-  //         tempData.push(documentSnapshot);
-  //       });
-  //       // return await AsyncStorage.setItem(
-  //       //   'user',
-  //       //   console.log(JSON.stringify(tempData[0]._data)),
-  //       // );
-  //       console.log(tempData)
-  //     });
-  //     // console.log(JSON.stringify(tempData[0]._data))
-  // };
-
-  // await AsyncStorage.setItem(
-  //   'user',
-  //   JSON.stringify(tempData[0]._data),
-  // );
-
-  // React.useEffect(() => {
-  //   if (AsyncStorage.setItem('user')) {
-  //     setUser(JSON.stringify(tempData[0]._data));
-  //   }
-  // }, []);
+  const user = AsyncStorage.getItem('user');
   return (
     <Tab.Navigator screenOptions={{headerShown: false}}>
-      {email ? (
+      {user ? (
         <>
           <Tab.Screen
             name="Home "

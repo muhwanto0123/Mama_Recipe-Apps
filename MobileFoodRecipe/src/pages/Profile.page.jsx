@@ -1,47 +1,58 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import {View, Text, Image, StyleSheet} from 'react-native';
+import firestore from '@react-native-firebase/firestore';
+// import Icon from 'react-native-vector-icons/dist/FontAwesome';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Profile = () => {
-  const [email, setEmail] = React.useState('');
+  const [dataUser, setDataUser] = React.useState([]);
 
-  const userLogin = () => {
+  React.useEffect(() => {
+    profileUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const profileUser = async () => {
     firestore()
       .collection('users')
-      .where('email', '==', email)
       .get()
-      .then(async querySnapshot => {
+      .then(querySnapshot => {
         let tempData = [];
         querySnapshot.forEach(documentSnapshot => {
           tempData.push(documentSnapshot);
+          // console.log(documentSnapshot)
         });
-        return await AsyncStorage.setItem(
-          'user',
-          JSON.stringify(tempData[0]._data),
-        );
+        setDataUser(tempData[0]);
       });
   };
-  
+
   return (
     <View style={styles.container}>
-      <View style={styles.avatarContainer}>
-        <Image
-          source={{ uri: 'https://www.bootdey.com/img/Content/avatar/avatar6.png' }}
-          style={styles.avatar}
-        />
-        <Text style={styles.name}>Jane Doe</Text>
-      </View>
+      {/* {dataUser
+        ?.sort((next, prev) => prev?._data.created_at - next?._data.created_at)
+        ?.map((item, key) => ( */}
+          <View style={styles.avatarContainer}>
+            <Image
+              source={{uri: 'https://i.pravatar.cc/250'}}
+              style={styles.avatar}
+            />
+            <Text style={styles.name}> {dataUser?._data?.fullname} </Text>
+          </View>
+        {/* ))} */}
       <View style={styles.infoContainer}>
         <Text style={styles.infoLabel}>Email:</Text>
-        <Text style={styles.infoValue}>jane.doe@example.com</Text>
+        <Text style={styles.infoValue}>{dataUser?._data?.email}</Text>
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.infoLabel}>Location:</Text>
-        <Text style={styles.infoValue}>San Francisco, CA</Text>
+        <Text style={styles.infoLabel}>Phone:</Text>
+        <Text style={styles.infoValue}>{dataUser?._data?.phone}</Text>
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.infoLabel}>Bio:</Text>
-        <Text style={styles.infoValue}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</Text>
+        <Text style={styles.infoValue}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare
+          magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa
+          sem. Etiam finibus odio quis feugiat facilisis.
+        </Text>
       </View>
     </View>
   );
