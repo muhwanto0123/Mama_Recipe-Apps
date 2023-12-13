@@ -5,7 +5,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import firestore from '@react-native-firebase/firestore';
 
 import Home from '../src/pages/home.page';
 import DetailRecipe from '../src/pages/DetailRecipe.page';
@@ -17,10 +16,17 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function Tab_Navigation() {
-  const user = AsyncStorage.getItem('user');
+  const getUser = async () => {
+    try {
+      const user = await AsyncStorage.getItem('user');
+      console.log('User:', user);
+    } catch (error) {
+      console.error('Error getting user:', error);
+    }
+  };
   return (
     <Tab.Navigator screenOptions={{headerShown: false}}>
-      {user ? (
+      {getUser ? (
         <>
           <Tab.Screen
             name="Home "
@@ -80,21 +86,6 @@ function Tab_Navigation() {
     </Tab.Navigator>
   );
 }
-
-// function App() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator>
-//         <Stack.Screen
-//           name="Home"
-//           component={Home}
-//           options={{headerShown: false}}
-//         />
-//         <Stack.Screen name="EditPost" component={EditPost} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// }
 
 const Navigation = () => {
   return (
