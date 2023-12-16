@@ -1,50 +1,53 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
-import firestore from '@react-native-firebase/firestore';
-// import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import {Button} from 'react-native-paper';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const Profile = () => {
-  const [dataUser, setDataUser] = React.useState([]);
+const Profile = ({navigation}) => {
+  const [dataUser, setDataUser] = React.useState({});
 
-  React.useEffect(() => {
-    profileUser();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  const profileUser = async () => {
-    firestore()
-      .collection('users')
-      .get()
-      .then(querySnapshot => {
-        let tempData = [];
-        querySnapshot.forEach(documentSnapshot => {
-          tempData.push(documentSnapshot);
-          // console.log(documentSnapshot)
-        });
-        setDataUser(tempData[0]);
-      });
-  };
+  // React.useEffect(() => {
+  //   profileUser();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
+  // const profileUser = async () => {
+  //   firestore()
+  //     .collection('users')
+  //     .get()
+  //     .then(querySnapshot => {
+  //       let tempData = [];
+  //       querySnapshot.forEach(documentSnapshot => {
+  //         tempData.push(documentSnapshot);
+  //         // console.log(documentSnapshot)
+  //       });
+  //       setDataUser(tempData[0]);
+  //     });
+  // };
+  // const [data, setData] = React.useState({});
+
+  (async () => {
+    const user = await AsyncStorage.getItem('user');
+    setDataUser(JSON.parse(user));
+  })();
 
   return (
     <View style={styles.container}>
       {/* {dataUser
         ?.sort((next, prev) => prev?._data.created_at - next?._data.created_at)
         ?.map((item, key) => ( */}
-          <View style={styles.avatarContainer}>
-            <Image
-              source={{uri: 'https://i.pravatar.cc/250'}}
-              style={styles.avatar}
-            />
-            <Text style={styles.name}> {dataUser?._data?.fullname} </Text>
-          </View>
-        {/* ))} */}
+      <View style={styles.avatarContainer}>
+        <Image
+          source={{uri: 'https://i.pravatar.cc/250'}}
+          style={styles.avatar}
+        />
+        <Text style={styles.name}> {dataUser?.fullname} </Text>
+      </View>
+      {/* ))} */}
       <View style={styles.infoContainer}>
         <Text style={styles.infoLabel}>Email:</Text>
-        <Text style={styles.infoValue}>{dataUser?._data?.email}</Text>
-      </View>
-      <View style={styles.infoContainer}>
-        <Text style={styles.infoLabel}>Phone:</Text>
-        <Text style={styles.infoValue}>{dataUser?._data?.phone}</Text>
+        <Text style={styles.infoValue}>{dataUser?.email}</Text>
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.infoLabel}>Bio:</Text>
@@ -54,6 +57,18 @@ const Profile = () => {
           sem. Etiam finibus odio quis feugiat facilisis.
         </Text>
       </View>
+      <Button
+        mode="contained"
+        style={{borderRadius: 10, backgroundColor: 'red', padding: 3, marginTop: 45}}
+        onPress={() => {
+          AsyncStorage.removeItem('user');
+          // RNRestart.restart();
+          setTimeout(() => {
+            navigation.navigate('Home');
+          }, 2000);
+        }}>
+        Logout
+      </Button>
     </View>
   );
 };

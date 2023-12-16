@@ -1,86 +1,189 @@
 [
-    {
-      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/82ebc109-e569-4cbd-b25a-fc435e97b53a_268466b7-4d23-4be1-8cb9-b1f03e73391e.jpg?auto=format",
-      "title": "Mie Ayam Monas",
-      "slug": "Mie-Ayam-Monas",
-      "ingridients": "Mie Ayam + 1 Bakso Monas + Pangsit Rebus",
-      "youtube": {
-        "title": "MANTAP !!! MAKAN MIE AYAM DI MONAS",
-        "link": "https://www.youtube.com/watch?v=85L-_EvWCVY"
-      },
-      "made": "Gojek",
-      "rating": "5.0",
-      "isPopular": true,
-      "isNew": false
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/06/10/0/FNK_Slow-Cooker-Stuffed-Peppers_H1_s4x3.jpg.rend.hgtvcom.826.620.suffix/1591825563872.jpeg",
+    "title": "slow cooker stuffed peppers",
+    "slug": "slow-cooker-stuffed-peppers",
+    "ingredients":"5 large red, orange or yellow bell peppers, 1 pound 90-percent lean ground beef, One 14.5-ounce can fire-roasted diced tomatoes, 2 cups shredded pepper jack cheese (from one 8-ounce block)",
+    "video": {
+      "title": "Slow Cooker Stuffed Peppers",
+      "link": "https://www.youtube.com/watch?v=hRta_ZTEddM"
     },
-    {
-      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/f8c23004-1095-4722-b328-99d884e481db_12566.jpg?auto=format",
-      "title": "Jagoan Hemat",
-      "slug": "Jagoan-Hemat",
-      "ingridients": "2 Pcs Rice + 2 Pcs Chicken + 2 Pcs Aqua",
-      "youtube": {
-        "title": "KFC Combo • Jagoan Hemat Kenyang Berdua • TVC Edisi 2023",
-        "link": "https://www.youtube.com/watch?v=hyKsVbWgG3w"
-      },
-      "made": "Gojek",
-      "rating": "5.0",
-      "isPopular": true,
-      "isNew": false
+    "isPopular": true,
+    "isNew": true,
+    "rating":"4.7",
+
+    "category":["soup"]
+  },
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/11/16/0/FNK_Air-Fryer-Parmesan-Chicken-Broccoli_H1_s4x3.jpg.rend.hgtvcom.826.620.suffix/1605561210481.jpeg",
+    "title": "Healthy Air Fryer Parmesan Chicken with Broccoli",
+    "slug": "healthy-air-fryer-parmesan-chicken-with-broccoli",
+    "ingredients":"1/3 cup panko, 1/4 cup finely grated Parmesan, 4 teaspoons olive oil, 1/2 teaspoon dried oregano, Kosher salt and freshly ground black pepper",
+    "video": {
+      "title": "Healthy Air Fryer Chicken and Broccoli",
+      "link": "https://www.youtube.com/watch?v=8uHJBaDC7n4"
     },
-    {
-      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a0881254-4260-43d4-b0b0-32feb0985166_Go-Biz_20220620_132311.jpeg?auto=format",
-      "title": "Special Sapi (Telur Ayam 4, Daging Lebih Banyak)",
-      "slug": "Special-Sapi",
-      "ingridients": "Telur Ayam 4 Dan Daging Lebih Banyak",
-      "youtube": {
-        "title": "Martabak AA, Manggarai",
-        "link": "https://gofood.co.id/en/jakarta/restaurant/martabak-aa-manggarai-0d3bbb05-6365-4e9e-839e-529bc06ae6ac"
-      },
-      "made": "Gojek",
-      "rating": "5.0",
-      "isPopular": true,
-      "isNew": false
+    "isPopular": true,
+    "isNew": true,
+    "rating":"4.7",
+
+    "category":["chicken"]
+  },
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/1/28/2/KC0413H_Ricotta-Gnocchi_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1532460357212.jpeg",
+    "title": "Ricotta Gnocchi",
+    "slug": "ricotta-gnocchi",
+    "ingredients":"Kosher salt, 2 cups ricotta cheese, 1/2 cup grated Parmesan, 1 1/2 tablespoons extra-virgin olive oil, 2 large eggs ",
+    "video": {
+      "title": "GNOCCHI di RICOTTA",
+      "link": "https://www.youtube.com/watch?v=bRsPRBUa434"
     },
-    {
-      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/79cb20e9-1070-4e40-9f58-17d94677dfd4_Go-Biz_20230106_001729.jpeg?auto=format",
-      "title": "Paket Promo Happy 1",
-      "slug": "Paket-Promo-Happy-1",
-      "ingridients": "Nasi + ayam + tempe + sambal + lalapan + es tekit",
-      "youtube": {
-        "title": "Ayam Geybok Bang Jarwo, Manggarai",
-        "link": "https://gofood.co.id/en/jakarta/restaurant/ayam-geybok-bang-jarwo-manggarai-b2a16f15-d770-406a-98b4-04c119c43372"
-      },
-      "made": "Gojek",
-      "rating": "5.0",
-      "isPopular": false,
-      "isNew": true
+    "isPopular": true,
+    "isNew": true,
+    "rating":"4.7",
+
+    "category":["soup"]
+  },
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2003/10/16/4/tm1b27_pork_tenderloins3.jpg.rend.hgtvcom.1280.720.suffix/1431255253080.jpeg",
+    "title": "Balsamic Roast Pork Tenderloins",
+    "slug": "balsamic-roast-pork-tenderloins",
+    "ingredients":"4 1/2 pounds pork tenderloins, 2 packages with 2 tenderloins in each package, 4 tablespoons balsamic vinegar, 4 tablespoons extra-virgin olive oil, 8 cloves garlic, cracked",
+     "video": {
+      "title": "Balsamic Roasted Pork Loin",
+      "link": "https://www.youtube.com/watch?v=N0f-xkxcA30"
     },
-    {
-      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/4f48ee93-ac5e-4d75-a327-61f040fdd665_87bd6907-d1bf-4c3c-bc6e-9076d0e8aec7.jpg?auto=format",
-      "title": "Nasi Cethut",
-      "slug": "Nasi-Cethut",
-      "ingridients": "Nasi, mie jawa, orek tempe, ayam suwir, telur, sambal, paru goreng",
-      "youtube": {
-        "title": "Cethut, Sampoerna Strategic Square",
-        "link": "https://gofood.co.id/en/jakarta/restaurant/cethut-sampoerna-strategic-square-272e0da8-43a2-4ab2-ae65-c79b6b57484f"
-      },
-      "made": "Gojek",
-      "rating": "5.0",
-      "isPopular": false,
-      "isNew": true
+    "isPopular": true,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["meat"]
+  },
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/12/1/1/BX0106_Salmon-Cakes.jpg.rend.hgtvcom.1280.720.suffix/1620691182999.jpeg",
+    "title": "Salmon Cakes",
+    "slug": "salmon-cakes",
+    "ingredients":"1/2 pound fresh salmon, Good olive oil, Kosher salt and freshly ground black pepper, 4 tablespoons unsalted butter",
+    "video": {
+      "title": "Salmon Cakes Recipe",
+      "link": "https://www.youtube.com/watch?v=gOwBlnSmuxw"
     },
-    {
-      "image": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/517fe07f-e646-4ff1-aca8-779107be2758_menu-item-image_1664424807697.jpg?auto=format",
-      "title": "Paket Duo Hemat 2",
-      "slug": "Paket-Duo-Hemat-2",
-      "ingridients": "Paket duo hemat 2 untuk 2 porsi (nasi, ayam geprek mix telor + keju mozarella + sambal bohay/karca + timun)",
-      "youtube": {
-        "title": "Ayam Keprabon Express, Ambassador",
-        "link": "https://gofood.co.id/en/jakarta/restaurant/ayam-keprabon-express-ambassador-0ca2fb1a-8407-4375-b4a6-6b770300d48a"
-      },
-      "made": "Gojek",
-      "rating": "5.0",
-      "isPopular": false,
-      "isNew": true
-    }
-  ]
+    "isPopular": true,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["seafood"]
+  },
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/3/26/0/BX0121-1_Parmesan-Roasted-Broccoli_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1488903158353.jpeg",
+    "title": "Parmesan-Roasted Broccoli",
+    "slug": "parmesan-roasted-broccoli",
+    "ingredients":"4 to 5 pounds broccoli, 4 garlic cloves, peeled and thinly sliced, Good olive oil, 1 1/2 teaspoons kosher salt",
+     "video": {
+      "title": "Lemon Parmesan Roasted Broccoli!",
+      "link": "https://www.youtube.com/watch?v=OCr9TEMtHjw"
+    },
+    "isPopular": false,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["soup"]
+  },
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/10/8/0/fnk_scalloped-potatoes_s4x3.jpg.rend.hgtvcom.826.620.suffix/1383780633985.jpeg",
+    "title": "Scalloped Potatoes",
+    "slug": "scalloped-potatoes",
+    "ingredients":"2 tablespoons unsalted butter, plus more for the baking dish, 4 medium russet potatoes (about 2 pounds), 1 1/2 cups heavy cream, 1/2 cup whole milk",
+    "video": {
+      "title": "Scalloped Potato Roll",
+      "link": "https://www.youtube.com/watch?v=AEhBwiIEdj4"
+    },
+    "isPopular": false,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["seafood"]
+  },
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/12/21/0/FN_maple-delicata-squash-salad_s4x3.jpg.rend.hgtvcom.826.620.suffix/1608574977502.jpeg",
+    "title": "Maple Roasted Squash Salad",
+    "slug": "maple-roasted-delicata-squash-salad",
+    "ingredients":"1 delicata squash (about 1 pound 8 ounces), 1 tablespoon pure maple syrup, 5 tablespoons plus 1 teaspoon extra-virgin olive oil, 1 teaspoon chili powder",
+    "video": {
+      "title": "Maple roasted squash salad ",
+      "link": "https://www.youtube.com/watch?v=p2RNFbWMsr4"
+    },
+    "isPopular": false,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["salad"]
+  },
+  
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/02/03/FNK_HealthyMediterraneanBakedHaddock_V1_H.jpg.rend.hgtvcom.826.620.suffix/1612402192317.jpeg",
+    "title": "Mediterranean Baked Haddock",
+    "slug": "mediterranean-baked-haddock",
+    "ingredients":"Two 14-ounce cans cherry tomatoes, 1/2 cup dry white wine, 1/2 cup pitted Kalamata olives, sliced in half, 4 cloves garlic, minced",
+    "video": {
+      "title": "Mediterranean Baked Fish with Tomatoes and Capers",
+      "link": "https://www.youtube.com/watch?v=eZR0GnnWVlQ"
+    },
+    "isPopular": false,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["dessert"]
+  },
+  
+  
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/11/23/0/FN_lemon-chicken-006_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1384540644321.jpeg",
+    "title": "Lemon Chicken",
+    "slug": "lemon-chicken",
+    "ingredients":"1 1/2 pounds chicken breast or chicken tenders, cut into chunks, 1/4 cup all-purpose unbleached flour, Coarse salt, 2 tablespoons wok or vegetable oil, 2 turns of the pan (preferred brand: House of Tsang)",
+    "video": {
+      "title": "The CRUNCHIEST Lemon Chicken ",
+      "link": "https://www.youtube.com/watch?v=zHFp2mYQjTg"
+    },
+    "isPopular": true,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["chicken"]
+  },
+
+
+  {
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/11/23/0/FN_lemon-chicken-006_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1384540644321.jpeg",
+    "title": "Lemon Chicken",
+    "slug": "lemon-chicken",
+    "ingredients":"1 1/2 pounds chicken breast or chicken tenders, cut into chunks, 1/4 cup all-purpose unbleached flour, Coarse salt, 2 tablespoons wok or vegetable oil, 2 turns of the pan (preferred brand: House of Tsang)",
+    "video": {
+      "title": "The CRUNCHIEST Lemon Chicken ",
+      "link": "https://www.youtube.com/watch?v=zHFp2mYQjTg"
+    },
+    "isPopular": true,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["chicken"]
+  },
+
+  {
+    "image": "https://www.allrecipes.com/thmb/NTbJ-FEgXDGHZcLMnGB-kyGKiGQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4558051-favorite-old-fashioned-gingerbread-photo-by-rachelle-schockey-a5640ee14352477284342558194e5e2e.jpg",
+    "title": "Ginger bread",
+    "slug": "ginger-bread",
+    "ingredients":"Butter: This gingerbread recipe starts with a stick of softened, unsalted butter. Sugar: White sugar adds the perfect amount of sweetness. Egg: A large egg adds moisture and acts as a binder, which means it holds the batter together.",
+    "video": {
+      "title": "Fashioned Gingerbread",
+      "link": "https://www.youtube.com/watch?v=lsN8H7T0-N0"
+    },
+    "isPopular": true,
+    "isNew": false
+    ,
+    "rating":"4.7",
+    "category":["dessert"]
+  }
+  
+]

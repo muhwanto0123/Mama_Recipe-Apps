@@ -9,22 +9,19 @@ import {
   ImageBackground,
   ScrollView,
   TouchableWithoutFeedback,
+  TouchableOpacity,
 } from 'react-native';
-
-
 
 import {Searchbar, Text} from 'react-native-paper';
 import recipeList from '../data/recipe.json';
 
-
 function Home({navigation}) {
   const [keyword, setKeyword] = React.useState('');
-
   return (
     <ScrollView style={styles.root}>
       <Searchbar
         placeholder="Search Pasta, Bread, etc"
-        value={keyword}
+        // value={keyword}
         style={styles.searchBox}
         onChangeText={text => setKeyword(text)}
       />
@@ -37,36 +34,65 @@ function Home({navigation}) {
           flexDirection: 'row',
           justifyContent: 'space-between',
         }}>
-        {[
-          {
-            icons: <Image source={require('../assets/Soup.png')} />,
-            label: 'Soup',
-          },
-          {
-            icons: <Image source={require('../assets/Chicken.png')} />,
-            label: 'Chicken',
-          },
-          {
-            icons: <Image source={require('../assets/Seafood.png')} />,
-            label: 'Seafood',
-          },
-          {
-            icons: <Image source={require('../assets/Desert.png')} />,
-            label: 'Desert',
-          },
-        ].map((item, key) => (
-          <View key={key}>
-            {item.icons}
-            <Text
-              style={{
-                textAlign: 'center',
-                fontWeight: 800,
-                marginTop: 5,
-              }}>
-              {item.label}
-            </Text>
-          </View>
-        ))}
+        {recipeList
+          ?.filter(item => item.category == 'soup')
+          .slice(0, 1)
+          .map((item, key) => (
+            <View key={key} style={{alignItems: 'center'}}>
+              <View>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('Category', item)}>
+                  <Image source={require('../assets/Soup.png')} />
+                </TouchableOpacity>
+              </View>
+              <Text style={{marginTop: 5}}>Soup</Text>
+            </View>
+          ))}
+
+        {recipeList
+          ?.filter(item => item.category == 'chicken')
+          .slice(0, 1)
+          .map((item, key) => (
+            <View key={key} style={{alignItems: 'center'}}>
+              <View>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('Category', item)}>
+                  <Image source={require('../assets/Chicken.png')} />
+                </TouchableOpacity>
+              </View>
+              <Text style={{marginTop: 5}}>Chicken</Text>
+            </View>
+          ))}
+
+        {recipeList
+          ?.filter(item => item.category == 'seafood')
+          .slice(0, 1)
+          .map((item, key) => (
+            <View key={key} style={{alignItems: 'center'}}>
+              <View>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('Category', item)}>
+                  <Image source={require('../assets/Seafood.png')} />
+                </TouchableOpacity>
+              </View>
+              <Text style={{marginTop: 5}}>Seafood</Text>
+            </View>
+          ))}
+
+        {recipeList
+          ?.filter(item => item.category == 'dessert')
+          .slice(0, 1)
+          .map((item, key) => (
+            <View key={key} style={{alignItems: 'center'}}>
+              <View>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('Category', item)}>
+                  <Image source={require('../assets/Desert.png')} />
+                </TouchableOpacity>
+              </View>
+              <Text style={{marginTop: 5}}>Dessert</Text>
+            </View>
+          ))}
       </View>
       <Text style={styles.heading_1}>New Recipe</Text>
       <ScrollView horizontal={true}>

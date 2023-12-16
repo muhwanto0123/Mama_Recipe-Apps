@@ -15,7 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function DetailRecipe({navigation, route}) {
   const [bodyView, setBodyview] = React.useState('ingredients');
-  const {image, title, made, ingridients, youtube, slug} = route.params;
+  const {image, title, made, ingredients, video, slug} = route.params;
   const [commentList, setCommentList] = React.useState([]);
   const [message, setMessage] = React.useState('');
 
@@ -203,7 +203,7 @@ function DetailRecipe({navigation, route}) {
                 padding: 15,
                 borderRadius: 15,
               }}>
-              <Text style={{color: '#18172B'}}>{ingridients}</Text>
+              <Text style={{color: '#18172B'}}>{ingredients}</Text>
             </View>
           ) : null}
           {bodyView === 'vidio step' ? (
@@ -243,11 +243,11 @@ function DetailRecipe({navigation, route}) {
                     textAlign: 'center',
                     paddingBottom: 10,
                   }}>
-                  {youtube?.title}
+                  {video?.title}
                 </Text>
                 <Text
                   style={{color: '#AAAAAA', fontSize: 10, textAlign: 'center'}}>
-                  {youtube?.link}
+                  {video?.link}
                 </Text>
               </View>
             </View>
