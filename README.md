@@ -73,7 +73,7 @@ yarn android
 
 
 | Profile |
-| :---: | :---: |
+| :---: |
 |![My Recipe Page](https://i.postimg.cc/fyz17Y8g/Screenshot-1702995775.png)|
 
 
