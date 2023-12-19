@@ -1,8 +1,38 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<br />
+<p align="center">
+  <div align="center">
+    <img height="140" src="https://recipes-web-fe.vercel.app/logo-h.svg" alt="tickitz" border="0"/>
+  </div>
+  <h3 align="center">Mama Recipes App</h3>
+  <p align="center">
+    <a href="https://github.com/muhwanto0123/Mama_Recipe-Apps"><strong>Explore the docs »</strong></a>
+    <br />
+ 
 
-# Getting Started
+## Table of Contents
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Installation](#installation)
+
+
+
+# About The Project
+Explore the culinary world with our innovative food web app, Mama Recipes. This user-friendly platform offers a personalized experience, providing tailored recipe recommendations based on your taste preferences.  discover recipes using ingredients you already have. Access a vast Recipe Library with step-by-step instructions, making meal planning a breeze.  Join the vibrant community to share your culinary creations and discover the latest food trends. Mama recipes is not just an app; it's your culinary companion, transforming your kitchen into a haven of flavors. Visit our web app now and embark on a flavorful journey!
+
+
+## Built With
+
+These are the libraries and service used for building this backend API
+
+- [React Native](https://react.dev/learn)
+- [React Native Paper Provider](https://reactnativepaper.com/)
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Firebase](https://rnfirebase.io/)
+- [Redux toolkit](https://redux-toolkit.js.org/)
+
+# Installation
 
 ## Step 1: Start the Metro Server
 
@@ -32,48 +62,19 @@ npm run android
 yarn android
 ```
 
-### For iOS
+## ScreenShoot Project
+| Login Page | Register Page|Home Before Login|
+| :---: | :---: | :---: |
+|![Login Page](https://i.postimg.cc/138hYcsk/Screenshot-1702995785.png)|![Register Page](https://i.postimg.cc/vm9RGY1X/Screenshot-1702995795.png)|![Home Before Login](https://i.postimg.cc/X7DtFGdQ/Screenshot-1702996767.png)|
 
-```bash
-# using npm
-npm run ios
+| Home After Login |Detail Recipe|Category|
+| :---: | :---: | :---: |
+|![Register Page](https://i.postimg.cc/qRBDFyKf/Screenshot-1702997237.png)|![Home Page](https://i.postimg.cc/SQGhXxgv/Screenshot-1702995727.png)|![Register Page](https://i.postimg.cc/Kzrdg0DM/Screenshot-1702995757.png)|
 
-# OR using Yarn
-yarn ios
-```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+| Profile |
+| :---: |
+|![My Recipe Page](https://i.postimg.cc/fyz17Y8g/Screenshot-1702995775.png)|
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
 
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
