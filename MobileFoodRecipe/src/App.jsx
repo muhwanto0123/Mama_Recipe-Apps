@@ -17,10 +17,12 @@ import {PaperProvider} from 'react-native-paper';
 import {NavigationContainer} from '@react-navigation/native';
 import messaging from '@react-native-firebase/messaging';
 import firestore from '@react-native-firebase/firestore';
+import {Provider} from 'react-redux';
 
 import Navigation from '../navigation/navigation';
+import {Store} from './redux/store';
 
-function App() {
+const App = () => {
   const requestUserPermission = async () => {
     const authStatus = await messaging().requestPermission();
     const enabled =
@@ -43,12 +45,14 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <NavigationContainer>
-      <PaperProvider>
-        <Navigation />
-      </PaperProvider>
-    </NavigationContainer>
+    <Provider store={Store}>
+      <NavigationContainer>
+        <PaperProvider>
+          <Navigation />
+        </PaperProvider>
+      </NavigationContainer>
+    </Provider>
   );
-}
+};
 
 export default App;

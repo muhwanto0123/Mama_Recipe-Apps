@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {
   StyleSheet,
@@ -10,13 +10,26 @@ import {
   ScrollView,
   TouchableWithoutFeedback,
   TouchableOpacity,
+  FlatList,
 } from 'react-native';
 
 import {Searchbar, Text} from 'react-native-paper';
-import recipeList from '../data/recipe.json';
+import {useSelector, useDispatch} from 'react-redux';
+
+// import food from '../data/recipe.json';
+import {getFood} from '../redux/action';
 
 function Home({navigation}) {
   const [keyword, setKeyword] = React.useState('');
+  const {food} = useSelector(state => state.userReducer);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getFood());
+  }, []);
+
+  // console.log(food)
+  // console.log(food)
   return (
     <ScrollView style={styles.root}>
       <Searchbar
@@ -26,7 +39,9 @@ function Home({navigation}) {
         onChangeText={text => setKeyword(text)}
       />
 
+
       <Text style={styles.heading_1}>Popular for you</Text>
+
       <View
         style={{
           marginTop: 20,
@@ -34,7 +49,7 @@ function Home({navigation}) {
           flexDirection: 'row',
           justifyContent: 'space-between',
         }}>
-        {recipeList
+        {food
           ?.filter(item => item.category == 'soup')
           .slice(0, 1)
           .map((item, key) => (
@@ -49,7 +64,7 @@ function Home({navigation}) {
             </View>
           ))}
 
-        {recipeList
+        {food
           ?.filter(item => item.category == 'chicken')
           .slice(0, 1)
           .map((item, key) => (
@@ -64,7 +79,7 @@ function Home({navigation}) {
             </View>
           ))}
 
-        {recipeList
+        {food
           ?.filter(item => item.category == 'seafood')
           .slice(0, 1)
           .map((item, key) => (
@@ -79,7 +94,7 @@ function Home({navigation}) {
             </View>
           ))}
 
-        {recipeList
+        {food
           ?.filter(item => item.category == 'dessert')
           .slice(0, 1)
           .map((item, key) => (
@@ -97,7 +112,7 @@ function Home({navigation}) {
       <Text style={styles.heading_1}>New Recipe</Text>
       <ScrollView horizontal={true}>
         <View style={{flexDirection: 'row', gap: 20}}>
-          {recipeList
+          {food
             ?.filter(item => item.isNew)
             .map((item, key) => (
               <TouchableWithoutFeedback
@@ -134,7 +149,7 @@ function Home({navigation}) {
         </View>
       </ScrollView>
       <Text style={styles.heading_1}>Popular Recipe</Text>
-      {recipeList
+      {food
         ?.filter(item => item.isPopular)
         .map((item, key) => (
           <TouchableWithoutFeedback
