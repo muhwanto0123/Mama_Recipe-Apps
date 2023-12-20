@@ -76,5 +76,12 @@ yarn android
 | :---: |
 |![My Recipe Page](https://i.postimg.cc/fyz17Y8g/Screenshot-1702995775.png)|
 
+## Try App
+
+Documentation files are provided in the [Mama Recipes App](https://github.com/muhwanto0123/Mama_Recipe-Apps/releases/tag/v.1.0.0)
+
+## Related Project
+
+:rocket: [`Food Recipe Mobile`](https://github.com/muhwanto0123/Mama_Recipe-Apps)
 
 
